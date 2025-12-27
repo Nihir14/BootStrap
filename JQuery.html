@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Hide Paragraph</title>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p>
+
+  <button id="hideBtn">Hide Paragraphs</button>
+
+  <script>
+    $(document).ready(function () {
+      $("#hideBtn").click(function () {
+        $("p").hide();
+      });
+    });
+  </script>
+</body>
+</html>
