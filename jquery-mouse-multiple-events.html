@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=`">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "lightblue");
+                },
+                mouseleave: function(){
+                    $(this).css("background-color", "lightgreen");
+                },
+                click: function(){
+                    $(this).css("background-color", "lightcoral");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Click or move the mouse pointer over the paragraph</p>
+</body>
+</html>

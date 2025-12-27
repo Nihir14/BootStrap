@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic AJAX Example</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- jQuery (must load before JS) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body class="bg-light">
+
+  <div class="container mt-5">
+    <h2 class="mb-4">Basic AJAX (jQuery)</h2>
+
+    <button id="loadUser" class="btn btn-primary mb-3">
+      Load User
+    </button>
+
+    <pre
+      id="result"
+      class="p-3 border rounded bg-white"
+    >
+Click the button to load data
+    </pre>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+
+      $("#loadUser").on("click", function () {
+        $("#result").text("Loading...");
+
+        $.ajax({
+          url: "https://jsonplaceholder.typicode.com/users/1",
+          type: "GET",
+
+          success: function (data) {
+            $("#result").text(
+              JSON.stringify(data, null, 2)
+            );
+          },
+
+          error: function () {
+            $("#result").text("❌ Error loading data");
+          }
+        });
+
+      });
+
+    });
+  </script>
+
+</body>
+</html>
