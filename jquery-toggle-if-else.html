@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Toggle Using if-else</title>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .test {
+      padding: 15px;
+      background-color: #dff9fb;
+      border: 1px solid #22a6b3;
+      width: fit-content;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        if ($(".test").is(":visible")) {
+          $(".test").hide();
+        } else {
+          $(".test").show();
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <h2>jQuery Hide & Show using if-else</h2>
+
+  <p class="test">This paragraph will hide and show</p>
+
+  <button>Toggle Paragraph</button>
+
+</body>
+</html>

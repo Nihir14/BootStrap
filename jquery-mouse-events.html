@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Mouse Events – Correct Way</title>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #p1 {
+      padding: 15px;
+      background-color: #f1f2f6;
+      border: 1px solid #ced6e0;
+      width: fit-content;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    #status {
+      margin-top: 15px;
+      padding: 10px;
+      border: 1px solid #aaa;
+      background: #f8f9fa;
+      min-height: 20px;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function () {
+
+      // Double click → hide paragraph
+      $("p").dblclick(function () {
+        $(this).hide();
+        $("#status").text("Paragraph hidden using double click");
+      });
+
+      // Mouse enter
+      $("#p1").mouseenter(function () {
+        $("#status").text("Mouse entered p1");
+      });
+
+      // Mouse leave
+      $("#p1").mouseleave(function () {
+        $("#status").text("Mouse left p1");
+      });
+
+      // Mouse down
+      $("#p1").mousedown(function () {
+        $("#status").text("Mouse button pressed on p1");
+      });
+
+      // Mouse up
+      $("#p1").mouseup(function () {
+        $("#status").text("Mouse button released on p1");
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+
+  <h2>jQuery Mouse Events – Proper Practice</h2>
+
+  <p id="p1">
+    Interact with this paragraph  
+    <br>• Hover  
+    <br>• Mouse Down / Up  
+    <br>• Double Click to Hide
+  </p>
+
+  <div id="status">Event status will appear here</div>
+
+</body>
+</html>
