@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Flex Utilities Example</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+</head>
+<body class="p-4">
+
+  <h2 class="text-center mb-4">Bootstrap Flex Utilities</h2>
+
+  <!-- 1. d-flex -->
+  <section class="mb-4">
+    <h5>1. d-flex</h5>
+    <div class="d-flex bg-light p-2">
+      <div class="bg-primary text-white p-2 me-2">Item 1</div>
+      <div class="bg-success text-white p-2 me-2">Item 2</div>
+      <div class="bg-danger text-white p-2">Item 3</div>
+    </div>
+  </section>
+
+  <!-- 2. justify-content -->
+  <section class="mb-4">
+    <h5>2. justify-content-between</h5>
+    <div class="d-flex justify-content-between bg-light p-2">
+      <div class="bg-info text-white p-2">Left</div>
+      <div class="bg-warning text-dark p-2">Center</div>
+      <div class="bg-secondary text-white p-2">Right</div>
+    </div>
+  </section>
+
+  <!-- 3. align-items -->
+  <section class="mb-4">
+    <h5>3. align-items-center</h5>
+    <div class="d-flex align-items-center bg-light p-2" style="height: 100px;">
+      <div class="bg-primary text-white p-2">Centered</div>
+    </div>
+  </section>
+
+  <!-- 4. flex-direction -->
+  <section class="mb-4">
+    <h5>4. flex-column</h5>
+    <div class="d-flex flex-column bg-light p-2">
+      <div class="bg-success text-white p-2 mb-2">Item 1</div>
+      <div class="bg-danger text-white p-2 mb-2">Item 2</div>
+      <div class="bg-primary text-white p-2">Item 3</div>
+    </div>
+  </section>
+
+  <!-- 5. flex-wrap -->
+  <section class="mb-4">
+    <h5>5. flex-wrap</h5>
+    <div class="d-flex flex-wrap bg-light p-2">
+      <div class="bg-info text-white p-2 m-1">Box 1</div>
+      <div class="bg-info text-white p-2 m-1">Box 2</div>
+      <div class="bg-info text-white p-2 m-1">Box 3</div>
+      <div class="bg-info text-white p-2 m-1">Box 4</div>
+      <div class="bg-info text-white p-2 m-1">Box 5</div>
+    </div>
+  </section>
+
+  <!-- 6. align-self -->
+  <section class="mb-4">
+    <h5>6. align-self</h5>
+    <div class="d-flex bg-light p-2" style="height: 120px;">
+      <div class="bg-primary text-white p-2 align-self-start">Start</div>
+      <div class="bg-success text-white p-2 align-self-center">Center</div>
+      <div class="bg-danger text-white p-2 align-self-end">End</div>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+/* Change Bootstrap primary color
+   declare global css variables
+*/
+
+:root {
+  --bs-primary: #6f42c1;
+}
+
+/* Custom button */
+.btn-custom {
+  background-color: #6f42c1;
+  color: white;
+  border-radius: 30px;
+}
+
+.btn-custom:hover {
+  background-color: #59339d;
+  color: white;
+}
